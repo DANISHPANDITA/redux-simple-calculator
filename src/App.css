@@ -1,38 +1,86 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap"); /** @format */
+* {
+  margin: 0;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100vw;
   min-height: 100vh;
+  background-color: #e1e8eb;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.inputNumbers {
+  text-align: right;
+  margin-top: 5vh;
+  height: 15vh;
+  width: 90%;
+  background-color: #dbe6fd;
+  font-family: "Pacifico", cursive;
+  border-radius: 2vw;
+  outline: none;
+  border: 4px solid rgb(168, 165, 165);
+  padding: 1vh 3vw 1vh 3vw;
+  font-size: 13vh;
+  color: #f54748;
+}
+.buttons {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+  height: 16vh;
+  width: 16vw;
+  background-color: #f36f6f;
+  outline: none;
+  border: none;
+  transition: 250ms ease-in-out;
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
+  font-size: xx-large;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #ffbfbf;
+  color: rgb(4, 162, 253);
+  text-decoration: underline;
+}
+.finalRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.numberButtons {
+  border-right: 2px solid rgb(185, 185, 185);
+}
+.extraButtons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 500px) {
+  .buttons {
+    margin-top: 10vh;
   }
-  to {
-    transform: rotate(360deg);
+  .button {
+    height: 13vh;
+    width: 16vw;
+  }
+  .inputNumbers {
+    height: 10vh;
+    font-size: 8vh;
   }
 }
